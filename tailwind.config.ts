@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				nft: {
+					primary: 'hsl(var(--nft-primary))',
+					secondary: 'hsl(var(--nft-secondary))',
+					accent: 'hsl(var(--nft-accent))',
+					muted: 'hsl(var(--nft-muted))',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +91,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-up': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'pulse-subtle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-40rem 0' },
+					'100%': { backgroundPosition: '40rem 0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'fade-up': 'fade-up 0.5s ease-out',
+				'pulse-subtle': 'pulse-subtle 2s infinite ease-in-out',
+				'shimmer': 'shimmer 2s infinite linear'
 			}
 		}
 	},
